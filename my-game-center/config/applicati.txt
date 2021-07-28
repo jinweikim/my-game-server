@@ -1,0 +1,33 @@
+logging:
+  config: file:config/log4j2.xml
+server:
+  port: 5003
+
+spring:
+  application:
+    name: game-center-server
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: jinwei
+      password: KING1218
+      authentication-database: admin
+      database: my-game
+
+  redis:
+    host: localhost
+    port: 6379
+    password: KING1218
+
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 7777
+      discovery:
+        instance-id: game-center-server:5003
+        prefer-ip-address: true
+        ip-address: 127.0.0.1
+        catalog-services-watch-delay: 10000
+
+
